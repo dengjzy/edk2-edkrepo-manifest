@@ -4,4 +4,5 @@
   <Project name="EdkRepo" xmlPath="edk2/EdkRepo/EdkRepo.xml" />
   <Project name="EdkRepoManifest" xmlPath="edk2/EdkRepoManifest/EdkRepoManifest.xml" />
   <Project name="Intel-MinPlatform" xmlPath="edk2-platforms/Intel-MinPlatform/IntelMinPlatformManifest.xml" />
+  <Project name="V" xmlPath="vManifest.xml" />
 </ProjectList>
