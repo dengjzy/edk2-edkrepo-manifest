@@ -1,3 +1,0 @@
-EdkRepo: Short one line description of change
-
-Several lines of description for the change.
