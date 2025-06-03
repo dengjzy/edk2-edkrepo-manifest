@@ -44,11 +44,9 @@
     <Remote name="Edk2Platforms">http://gerrit.damo.xrvm.cn/a/FW/v_uefi_qemu-based</Remote>
     <Remote name="Binaries">http://gerrit.damo.xrvm.cn/a/FW/v_fw_binary</Remote>
     <Remote name="Fip">http://gerrit.damo.xrvm.cn/a/FW/v_fiptools</Remote>
-    <Remote name="Commit-msg">http://gerrit.damo.xrvm.cn/tools/hooks/commit-msg</Remote>
   </RemoteList>
 
   <ClientGitHookList>
-    <ClientGitHook destination=".git/hooks/commit-msg destination_file="hooks/commit-msg" remote="Commit-msg" source="hooks/commit-msg" />
   </ClientGitHookList>
 
   <CommitTemplates>
