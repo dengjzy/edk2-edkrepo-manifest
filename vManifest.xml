@@ -48,7 +48,7 @@
   </RemoteList>
 
   <ClientGitHookList>
-    <ClientGitHook destination=".git/hooks/commit-msg destination_file="/hooks/commit-msg" remote="Commit-msg" source="/hooks/commit-msg" />
+    <ClientGitHook destination=".git/hooks/commit-msg destination_file="hooks/commit-msg" remote="Commit-msg" source="hooks/commit-msg" />
   </ClientGitHookList>
 
   <CommitTemplates>
