@@ -24,6 +24,14 @@
     <SparseData remote="xMA">
       <AlwaysInclude>*.*</AlwaysInclude>
     </SparseData>
+    <SparseData remote="Edk2">
+      <AlwaysInclude>BaseTools|Conf</AlwaysInclude>
+      <AlwaysInclude>EmbeddedPkg</AlwaysInclude>
+      <AlwaysInclude>MdeModulePkg|MdePkg|NetworkPkg|PcAtChipsetPkg|SecurityPkg</AlwaysInclude>
+      <AlwaysInclude>ShellPkg|SourceLevelDebugPkg|UefiCpuPkg|FmpDevicePkg|CryptoPkg</AlwaysInclude>
+      <AlwaysInclude>OvmfPkg|PrmPkg|RedfishPkg|SignedCapsulePkg|StandaloneMmPkg</AlwaysInclude>
+      <AlwaysInclude>UefiPayloadPkg|UnitTestFrameworkPkg</AlwaysInclude>
+    </SparseData>
     <SparseData remote="Edk2Platforms">
       <AlwaysInclude>Drivers</AlwaysInclude>
       <AlwaysInclude>Features</AlwaysInclude>
@@ -41,6 +49,7 @@
   <RemoteList>
     <!-- The 'name' attribute for each Remote tag must be unique. -->
     <Remote name="xMA">http://gerrit.damo.xrvm.cn/FW/xMA-firmware</Remote>
+    <Remote name="Edk2">http://gerrit.damo.xrvm.cn/a/FW/v_edk2</Remote>
     <Remote name="Edk2Platforms">http://gerrit.damo.xrvm.cn/a/FW/v_uefi_qemu-based</Remote>
     <Remote name="Binaries">http://gerrit.damo.xrvm.cn/a/FW/v_fw_binary</Remote>
     <Remote name="Fip">http://gerrit.damo.xrvm.cn/a/FW/v_fiptools</Remote>
@@ -58,6 +67,7 @@
   <CombinationList>
     <Combination name="master" description="the rvsp_edk2-stable202408 branch from edk2 Repo, RVServerPlatform_20240912 branch from edk2-platforms repo">
       <Source localRoot="xMA" remote="xMA" branch="V_FPGA-dev" sparseCheckout="true" enableSubmodule="true" />
+      <Source localRoot="edk2" remote="Edk2" branch="rvsp_edk2-stable202408" sparseCheckout="true" enableSubmodule="true" />
       <Source localRoot="edk2-platforms" remote="Edk2Platforms" branch="RVServerPlatform_20240912" sparseCheckout="true" enableSubmodule="true" />
       <Source localRoot="Binaries" remote="Binaries" branch="master" sparseCheckout="false" enableSubmodule="false" />
       <Source localRoot="Fip" remote="Fip" branch="master" sparseCheckout="false" enableSubmodule="false" />
