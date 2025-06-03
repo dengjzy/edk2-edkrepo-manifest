@@ -27,8 +27,8 @@
     <SparseData remote="Edk2Platforms">
       <AlwaysInclude>Drivers</AlwaysInclude>
       <AlwaysInclude>Features</AlwaysInclude>
-      <AlwaysInclude>Platform/*.*</AlwaysInclude>
-      <AlwaysInclude>Silicon/*.*</AlwaysInclude>
+      <AlwaysInclude>Platform/Damo|Platform/Qemu|Platform/RISC-V</AlwaysInclude>
+      <AlwaysInclude>Silicon/Damo|Silicon/Qemu|Silicon/RISC-V</AlwaysInclude>
       <AlwaysExclude>Platform/96Boards|Platform/AMD|Platform/BeagleBoard|Platform/Bosc|Platform/Hisilicon|Platform/Intel</AlwaysExclude>
       <AlwaysExclude>Platform/LeMaker|Platform/Loongson|Platform/Marvell|Platform/NXP|Platform/Phytium|Platform/RaspberryPi</AlwaysExclude>
       <AlwaysExclude>Platform/SiFive|Platform/Socionext|Platform/SoftIron|Platform/SolidRun|Platform/Sophgo</AlwaysExclude>
