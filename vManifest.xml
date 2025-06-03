@@ -5,6 +5,7 @@
     <DevLead>spike.yf@alibaba-inc.com</DevLead>
     <LeadReviewers>
       <Reviewer>chaichunyang.ccy@alibaba-inc.com</Reviewer>
+      <Reviewer>liyong.li@alibaba-inc.com</Reviewer>
     </LeadReviewers>
   </ProjectInfo>
 
@@ -20,6 +21,9 @@
       <!-- Always include all files in the repository root. -->
       <AlwaysInclude>*.*</AlwaysInclude>
     </SparseData>
+    <SparseData remote="xMA">
+      <AlwaysInclude>*.*</AlwaysInclude>
+    </SparseData>
     <SparseData remote="Edk2">
       <AlwaysInclude>BaseTools|Conf</AlwaysInclude>
       <AlwaysInclude>EmbeddedPkg</AlwaysInclude>
@@ -32,27 +36,24 @@
       <AlwaysInclude>Drivers</AlwaysInclude>
       <AlwaysInclude>Features</AlwaysInclude>
       <AlwaysInclude>Platform/Qemu/*.*</AlwaysInclude>
+      <AlwaysInclude>Platform/Damo/*.*</AlwaysInclude>
       <AlwaysInclude>RISC-V/*.*</AlwaysInclude>
-      <AlwaysInclude>SiFive/*.*</AlwaysInclude>
-      <AlwaysInclude>ARM/*.*</AlwaysInclude>
-      <AlwaysInclude>Silicon/RISC-V/*.*</AlwaysInclude>
-      <AlwaysInclude>Silicon/ARM/*.*</AlwaysInclude>
-      <AlwaysInclude>Silicon/SiFive/*.*</AlwaysInclude>
-    </SparseData>
-    <SparseData remote="qemu">
-      <AlwaysInclude>*.*</AlwaysInclude>
-    </SparseData>
-    <SparseData remote="xMA">
-      <AlwaysInclude>*.*</AlwaysInclude>
+      <AlwaysExclude>Platform/96Boards|Platform/AMD|Platform/BeagleBoard|Platform/Bosc|Platform/Hisilicon|Platform/Intel</AlwaysExclude>
+      <AlwaysExclude>Platform/LeMaker|Platform/Loongson|Platform/Marvell|Platform/NXP|Platform/Phytium|Platform/RaspberryPi</AlwaysExclude>
+      <AlwaysExclude>Platform/SiFive|Platform/Socionext|Platform/SoftIron|Platform/SolidRun|Platform/Sophgo</AlwaysExclude>
+      <AlwaysExclude>Silicon/ADM|Silicon/Ampere|Silicon/ARM|Silicon/Atmel|Silicon/Bosc|Silicon/Broadcom|Silicon/Hisilicon</AlwaysExclude>
+      <AlwaysExclude>Silicon/Intel|Silicon/Ampere|Silicon/Marvell|Silicon/Maxim|Silicon/NXP|Silicon/Openmoko|Silicon/Phytium</AlwaysExclude>
+      <AlwaysExclude>Silicon/SiFive|Silicon/Socionext|Silicon/Sophgo|Silicon/Synopsys|Silicon/TexasInstruments</AlwaysExclude>
     </SparseData>
   </SparseCheckout>
 
   <RemoteList>
     <!-- The 'name' attribute for each Remote tag must be unique. -->
+    <Remote name="xMA">http://gerrit.damo.xrvm.cn/FW/xMA-firmware</Remote>
     <Remote name="Edk2">http://gerrit.damo.xrvm.cn/a/FW/v_edk2</Remote>
     <Remote name="Edk2Platforms">http://gerrit.damo.xrvm.cn/a/FW/v_uefi_qemu-based</Remote>
-    <Remote name="qemu">http://gerrit.damo.xrvm.cn/FW/v_qemu</Remote>
-    <Remote name="xMA">http://gerrit.damo.xrvm.cn/FW/xMA-firmware</Remote>
+    <Remote name="Binaries">http://gerrit.damo.xrvm.cn/a/FW/v_fw_binary</Remote>
+    <Remote name="Fip">http://gerrit.damo.xrvm.cn/a/FW/v_fiptools</Remote>
   </RemoteList>
 
   <ClientGitHookList>
@@ -66,10 +67,11 @@
 
   <CombinationList>
     <Combination name="master" description="the rvsp_edk2-stable202408 branch from edk2 Repo, RVServerPlatform_20240912 branch from edk2-platforms repo">
-      <Source localRoot="edk2" remote="Edk2" branch="rvsp_edk2-stable202408" sparseCheckout="true" enableSubmodule="true" />
-      <Source localRoot="edk2-platforms" remote="Edk2Platforms" branch="RVServerPlatform_20240912" sparseCheckout="true" enableSubmodule="true" />
-      <Source localRoot="qemu" remote="qemu" branch="rvsp-ref_v0.1" sparseCheckout="true" />
       <Source localRoot="xMA" remote="xMA" branch="V_FPGA-dev" sparseCheckout="true" enableSubmodule="true" />
+      <Source localRoot="edk2-platforms" remote="Edk2Platforms" branch="RVServerPlatform_20240912" sparseCheckout="true" enableSubmodule="true" />
+      <Source localRoot="Binaries" remote="Binaries" branch="master" sparseCheckout="false" enableSubmodule="false" />
+      <Source localRoot="Fip" remote="Fip" branch="master" sparseCheckout="false" enableSubmodule="false" />
+      <Source localRoot="edk2" remote="Edk2" branch="rvsp_edk2-stable202408" sparseCheckout="true" enableSubmodule="true" />
     </Combination>
   </CombinationList>
 
