@@ -44,9 +44,11 @@
     <Remote name="Edk2Platforms">http://gerrit.damo.xrvm.cn/a/FW/v_uefi_qemu-based</Remote>
     <Remote name="Binaries">http://gerrit.damo.xrvm.cn/a/FW/v_fw_binary</Remote>
     <Remote name="Fip">http://gerrit.damo.xrvm.cn/a/FW/v_fiptools</Remote>
+    <Remote name="Commit-msg">http://gerrit.damo.xrvm.cn/tools/hooks/commit-msg</Remote>
   </RemoteList>
 
   <ClientGitHookList>
+    <ClientGitHook destination=".git/hooks/commit-msg destination_file="/hooks/commit-msg" remote="Commit-msg" source="/hooks/commit-msg" />
   </ClientGitHookList>
 
   <CommitTemplates>
@@ -65,8 +67,7 @@
   </CombinationList>
 
   <DscList>
-    <!-- List of the top-level Dsc's that are used to build this Platform.
-         These files will be parsed by EdkRepo to determine pkg dependencies
-     -->
+    <Dsc>edk2-platforms/Platform/Damo/XTC950Pkg/XTC950.dsc</Dsc>
+    <Dsc>edk2-platforms/Platform/Qemu/RiscVQemuServerPlatform/RiscVQemuServerPlatform.dsc</Dsc>
   </DscList>
 </Manifest>
