@@ -1,0 +1,33 @@
+<Pin>
+  <ProjectInfo>
+    <CodeName>V</CodeName>
+    <Description>test</Description>
+  </ProjectInfo>
+
+  <GeneralConfig>
+    <CurrentClonedCombo combination="master" />
+  </GeneralConfig>
+
+  <ClientGitHookList>
+    </ClientGitHookList>
+
+  <RemoteList>
+    <Remote name="xMA">http://gerrit.damo.xrvm.cn/FW/xMA-firmware</Remote>
+    <Remote name="Edk2">http://gerrit.damo.xrvm.cn/a/FW/v_edk2</Remote>
+    <Remote name="Edk2Platforms">http://gerrit.damo.xrvm.cn/a/FW/v_uefi_qemu-based</Remote>
+    <Remote name="Binaries">http://gerrit.damo.xrvm.cn/a/FW/v_fw_binary</Remote>
+    <Remote name="Fip">http://gerrit.damo.xrvm.cn/a/FW/v_fiptools</Remote>
+    <Remote name="Buildscript">http://gerrit.damo.xrvm.cn/a/FW/v_fw_buildscript</Remote>
+    <Remote name="Commonheader">http://gerrit.damo.xrvm.cn/a/FW/v_fw_commonheader</Remote>
+  </RemoteList>
+
+  <Combination name="master">
+    <Source localRoot="xMA" remote="xMA" branch="V_FPGA-dev" commit="781c627e9f0f831b980d44307c70e6efbd03e409" sparseCheckout="false" enableSubmodule="true" />
+    <Source localRoot="edk2" remote="Edk2" branch="rvsp_edk2-stable202408" commit="a35364fd19a6a6d490c8a12776ec0c568b5da02e" sparseCheckout="true" enableSubmodule="true" />
+    <Source localRoot="edk2-platforms" remote="Edk2Platforms" branch="RVServerPlatform_20240912" commit="ea48413946659e212cda2bcc0130e6cddf849c7e" sparseCheckout="true" enableSubmodule="true" />
+    <Source localRoot="Binaries" remote="Binaries" branch="master" commit="06c413c07d6d94912af0da8b5606d411d78d5ea3" sparseCheckout="false" enableSubmodule="false" />
+    <Source localRoot="Fip" remote="Fip" branch="master" commit="e5b5e6012ebaffd0e532761bfa0ea421938361f8" sparseCheckout="false" enableSubmodule="false" />
+    <Source localRoot="buildscript" remote="Buildscript" branch="master" commit="63cdfda4a5913f63b63668d9301ec69f9c29b5c4" sparseCheckout="false" enableSubmodule="false" />
+    <Source localRoot="Commonheader" remote="Commonheader" branch="master" commit="9a6a25565511b66e19c354ea0060d961e9ea08f3" sparseCheckout="false" enableSubmodule="false" />
+  </Combination>
+</Pin>

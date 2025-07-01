@@ -13,7 +13,7 @@
     <PinPath>V/pins</PinPath>
     <DefaultCombo combination="master" />
     <CurrentClonedCombo combination="master" />
-  </GeneralConfig>
+</GeneralConfig>
 
   <SparseCheckout>
     <SparseSettings sparseByDefault="true" />
@@ -21,26 +21,24 @@
       <!-- Always include all files in the repository root. -->
       <AlwaysInclude>*.*</AlwaysInclude>
     </SparseData>
-    <SparseData remote="xMA">
-      <AlwaysInclude>*.*</AlwaysInclude>
-    </SparseData>
     <SparseData remote="Edk2">
       <AlwaysInclude>BaseTools|Conf</AlwaysInclude>
-      <AlwaysInclude>EmbeddedPkg</AlwaysInclude>
-      <AlwaysInclude>MdeModulePkg|MdePkg|NetworkPkg|PcAtChipsetPkg|SecurityPkg</AlwaysInclude>
-      <AlwaysInclude>ShellPkg|SourceLevelDebugPkg|UefiCpuPkg|FmpDevicePkg|CryptoPkg</AlwaysInclude>
-      <AlwaysInclude>OvmfPkg|PrmPkg|RedfishPkg|SignedCapsulePkg|StandaloneMmPkg</AlwaysInclude>
-      <AlwaysInclude>UefiPayloadPkg|UnitTestFrameworkPkg</AlwaysInclude>
+      <AlwaysInclude>MdeModulePkg|MdePkg|NetworkPkg|ShellPkg</AlwaysInclude>
+      <AlwaysInclude>OvmfPkg|UefiCpuPkg|SecurityPkg|EmbeddedPkg|FatPkg|CryptoPkg</AlwaysInclude>
+      <AlwaysExclude>ArmPkg|ArmPlatformPkg|ArmVirtPkg|DynamicTablesPkg</AlwaysExclude>
+      <AlwaysExclude>EmulatorPkg|FmpDevicePkg|IntelFsp2Pkg|IntelFsp2WrapperPkg</AlwaysExclude>
+      <AlwaysExclude>PcAtChipsetPkg|PrmPkg|RedfishPkg|SignedCapsulePkg</AlwaysExclude>
+      <AlwaysExclude>SourceLevelDebugPkg|StandaloneMmPkg|UefiPayloadPkg|UnitTestFrameworkPkg</AlwaysExclude>
     </SparseData>
     <SparseData remote="Edk2Platforms">
-      <AlwaysInclude>Drivers</AlwaysInclude>
-      <AlwaysInclude>Features</AlwaysInclude>
       <AlwaysInclude>Platform/Damo|Platform/Qemu|Platform/RISC-V</AlwaysInclude>
       <AlwaysInclude>Silicon/Damo|Silicon/Qemu|Silicon/RISC-V</AlwaysInclude>
+      <AlwaysExclude>Drivers</AlwaysExclude>
+      <AlwaysExclude>Features</AlwaysExclude>
       <AlwaysExclude>Platform/96Boards|Platform/AMD|Platform/BeagleBoard|Platform/Bosc|Platform/Hisilicon|Platform/Intel</AlwaysExclude>
       <AlwaysExclude>Platform/LeMaker|Platform/Loongson|Platform/Marvell|Platform/NXP|Platform/Phytium|Platform/RaspberryPi</AlwaysExclude>
       <AlwaysExclude>Platform/SiFive|Platform/Socionext|Platform/SoftIron|Platform/SolidRun|Platform/Sophgo</AlwaysExclude>
-      <AlwaysExclude>Silicon/ADM|Silicon/Ampere|Silicon/ARM|Silicon/Atmel|Silicon/Bosc|Silicon/Broadcom|Silicon/Hisilicon</AlwaysExclude>
+      <AlwaysExclude>Silicon/AMD|Silicon/Ampere|Silicon/ARM|Silicon/Atmel|Silicon/Bosc|Silicon/Broadcom|Silicon/Hisilicon</AlwaysExclude>
       <AlwaysExclude>Silicon/Intel|Silicon/Ampere|Silicon/Marvell|Silicon/Maxim|Silicon/NXP|Silicon/Openmoko|Silicon/Phytium</AlwaysExclude>
       <AlwaysExclude>Silicon/SiFive|Silicon/Socionext|Silicon/Sophgo|Silicon/Synopsys|Silicon/TexasInstruments</AlwaysExclude>
     </SparseData>
@@ -53,6 +51,8 @@
     <Remote name="Edk2Platforms">http://gerrit.damo.xrvm.cn/a/FW/v_uefi_qemu-based</Remote>
     <Remote name="Binaries">http://gerrit.damo.xrvm.cn/a/FW/v_fw_binary</Remote>
     <Remote name="Fip">http://gerrit.damo.xrvm.cn/a/FW/v_fiptools</Remote>
+    <Remote name="Buildscript">http://gerrit.damo.xrvm.cn/a/FW/v_fw_buildscript</Remote>
+    <Remote name="Commonheader">http://gerrit.damo.xrvm.cn/a/FW/v_fw_commonheader</Remote>
   </RemoteList>
 
   <ClientGitHookList>
@@ -66,11 +66,13 @@
 
   <CombinationList>
     <Combination name="master" description="the rvsp_edk2-stable202408 branch from edk2 Repo, RVServerPlatform_20240912 branch from edk2-platforms repo">
-      <Source localRoot="xMA" remote="xMA" branch="V_FPGA-dev" sparseCheckout="true" enableSubmodule="true" />
+      <Source localRoot="xMA" remote="xMA" branch="V_FPGA-dev" sparseCheckout="false" enableSubmodule="true" />
       <Source localRoot="edk2" remote="Edk2" branch="rvsp_edk2-stable202408" sparseCheckout="true" enableSubmodule="true" />
       <Source localRoot="edk2-platforms" remote="Edk2Platforms" branch="RVServerPlatform_20240912" sparseCheckout="true" enableSubmodule="true" />
       <Source localRoot="Binaries" remote="Binaries" branch="master" sparseCheckout="false" enableSubmodule="false" />
       <Source localRoot="Fip" remote="Fip" branch="master" sparseCheckout="false" enableSubmodule="false" />
+      <Source localRoot="buildscript" remote="Buildscript" branch="master" sparseCheckout="false" enableSubmodule="false" />
+      <Source localRoot="Commonheader" remote="Commonheader" branch="master" sparseCheckout="false" enableSubmodule="false" />
     </Combination>
   </CombinationList>
 
