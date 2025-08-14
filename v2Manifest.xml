@@ -48,7 +48,7 @@
     <!-- The 'name' attribute for each Remote tag must be unique. -->
     <Remote name="xMA">http://gerrit.damo.xrvm.cn/FW/xMA-firmware</Remote>
     <Remote name="Edk2">http://gerrit.damo.xrvm.cn/a/FW/v_edk2</Remote>
-    <Remote name="Edk2Platforms">http://gerrit.damo.xrvm.cn/a/FW/v_uefi_qemu-based</Remote>
+    <Remote name="Edk2Platforms">http://gitlab.alibaba-inc.com/RISCV-Firmware/DynamicACPI_Dev.git</Remote>
     <Remote name="Binaries">http://gerrit.damo.xrvm.cn/a/FW/v_fw_binary</Remote>
     <Remote name="Fip">http://gerrit.damo.xrvm.cn/a/FW/v_fiptools</Remote>
     <Remote name="Buildscript">http://gerrit.damo.xrvm.cn/a/FW/v_fw_buildscript</Remote>
@@ -66,10 +66,10 @@
   </SubmoduleAlternateRemotes>
 
   <CombinationList>
-    <Combination name="master" description="the rvsp_edk2-stable202408 branch from edk2 Repo, RVServerPlatform_20240912 branch from edk2-platforms repo">
+    <Combination name="master" description="the rvsp_edk2-stable202408 branch from edk2 Repo, ACPI branch from edk2-platforms repo">
       <Source localRoot="xMA" remote="xMA" branch="V_FPGA-dev" sparseCheckout="false" enableSubmodule="true" />
       <Source localRoot="edk2" remote="Edk2" branch="rvsp_edk2-stable202408" sparseCheckout="true" enableSubmodule="true" />
-      <Source localRoot="edk2-platforms" remote="Edk2Platforms" branch="RVServerPlatform_20240912" sparseCheckout="true" enableSubmodule="true" />
+      <Source localRoot="edk2-platforms" remote="Edk2Platforms" branch="ACPI" sparseCheckout="true" enableSubmodule="true" />
       <Source localRoot="Binaries" remote="Binaries" branch="master" sparseCheckout="false" enableSubmodule="false" />
       <Source localRoot="Fip" remote="Fip" branch="master" sparseCheckout="false" enableSubmodule="false" />
       <Source localRoot="buildscript" remote="Buildscript" branch="master" sparseCheckout="false" enableSubmodule="false" />
