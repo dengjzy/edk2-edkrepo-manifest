@@ -76,6 +76,16 @@
       <Source localRoot="Commonheader" remote="Commonheader" branch="master" sparseCheckout="false" enableSubmodule="false" />
       <Source localRoot="Opensbi" remote="Opensbi" branch="opensbi-1.6-dev" sparseCheckout="false" enableSubmodule="false" />
     </Combination>
+      <Combination name="r35.4.1" description="The r35.4.1 release">
+      <Source localRoot="xMA" remote="xMA" tag="R.XT.AL.I.E85.2509.05" sparseCheckout="false" enableSubmodule="true" />
+      <Source localRoot="edk2" remote="Edk2" branch="rvsp_edk2-stable202408" sparseCheckout="true" enableSubmodule="true" />
+      <Source localRoot="edk2-platforms" remote="Edk2Platforms" tag="HAPS-001" sparseCheckout="true" enableSubmodule="true" />
+      <Source localRoot="Binaries" remote="Binaries" branch="master" sparseCheckout="false" enableSubmodule="false" />
+      <Source localRoot="Fip" remote="Fip" branch="master" sparseCheckout="false" enableSubmodule="false" />
+      <Source localRoot="buildscript" remote="Buildscript" branch="master" sparseCheckout="false" enableSubmodule="false" />
+      <Source localRoot="Commonheader" remote="Commonheader" branch="master" sparseCheckout="false" enableSubmodule="false" />
+      <Source localRoot="Opensbi" remote="Opensbi" branch="opensbi-1.6-dev" sparseCheckout="false" enableSubmodule="false" />
+    </Combination>
   </CombinationList>
 
   <DscList>
