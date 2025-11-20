@@ -86,7 +86,7 @@
       <Source localRoot="Commonheader" remote="Commonheader" branch="master" sparseCheckout="false" enableSubmodule="false" />
       <Source localRoot="Opensbi" remote="Opensbi" branch="opensbi-1.7-dev" sparseCheckout="false" enableSubmodule="false" />
     </Combination>
-    <Combination name="R.XT.AL.I.F85.1017.2511.01.p2" description="The R.XT.AL.I.F85.1017.2511.01.p2 release for 1017 P2 - 2025.11.20">
+    <Combination name="R.XT.AL.I.F85.1017.2511.01" description="The R.XT.AL.I.F85.1017.2511.01 release for 1017 P2 - 2025.11.20">
       <Source localRoot="xMA" remote="xMA" tag="R.XT.AL.I.F85.1017.2511.01.p2" sparseCheckout="false" enableSubmodule="true" />
       <Source localRoot="edk2" remote="Edk2" branch="rvsp_edk2-stable202408" sparseCheckout="true" enableSubmodule="true" />
       <Source localRoot="edk2-platforms" remote="Edk2Platforms" tag="HAPS-003" sparseCheckout="true" enableSubmodule="true" />
